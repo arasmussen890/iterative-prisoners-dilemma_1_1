@@ -110,10 +110,12 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     #
     # This example player always colludes
     if player == 0:
-        if getting_team_name:
-            return 'loyal'
-        else:
-            return 'c'
+        import random
+
+    name = 'Random'
+
+    def strategy(self, opponent):
+        return random.choice(['C','D'])
 
     
         
