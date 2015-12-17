@@ -126,10 +126,11 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     #
     #This example player always betrays.      
     elif player == 1:
-        if getting_team_name:
-            return 'backstabber'
-        else:
+        def strategy(self, opponent):
+            return 'c'
+        if self.history[-1] == 'c':
             return 'b'
+        return 'c'
 
 
 
@@ -724,4 +725,3 @@ def play_tournament(num_players):
         print('player ' + str(player) , ': ' , 
                str(int(scores[player])/num_players) , ' points: ',
                team_names[player])
-    /*Whats up*/
